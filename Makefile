@@ -17,6 +17,7 @@ help:
 	@echo "  make new NAME=経費精算                           # 新しい業務リポジトリを作成"
 	@echo "  make new NAME=経費精算 DESC=\"毎月の経費精算を半自動化する\"   # 説明付き"
 	@echo "  make new NAME=プレゼン資料 BASE_DIR=/data/work   # 別の親ディレクトリに作成"
+	@echo "  source ./enter.sh 経費精算                       # 作成後にそのまま cd"
 	@echo "  make list                                        # 既存リポジトリ一覧"
 	@echo "  make help                                        # このヘルプを表示"
 	@echo ""
@@ -24,6 +25,9 @@ help:
 	@echo "  $ cp .env.example .env"
 	@echo "  .env 内の BASE_DIR= に絶対パスを設定してください"
 	@echo "  現在の BASE_DIR: $(BASE_DIR)"
+	@echo ""
+	@echo "補足:"
+	@echo "  make 実行中には親シェルを cd できないため、自動移動したい場合は enter.sh を source してください"
 	@echo ""
 
 # 新しい業務リポジトリを作成
